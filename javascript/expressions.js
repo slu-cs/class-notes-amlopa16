@@ -1,5 +1,5 @@
 // Expression syntax in JavaScript
-
+/*
 // Booleans
 true
 false
@@ -73,3 +73,6 @@ if (x === 3){
 }else{
   console.log('x is now ${x}');
 }
+*/
+// change
+console.log('print this');
