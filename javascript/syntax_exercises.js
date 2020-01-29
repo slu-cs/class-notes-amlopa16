@@ -34,7 +34,7 @@ while (true){
       vals.push(true);
     }
   }
-  if (vals.length() === 10){
+  if (vals.length === 10){
     console.log(smallest_int);
     break;
   }
