@@ -16,10 +16,10 @@ for (let y = 0; y <= 1000; y++){
 
 // Exercise 3
 for (let x = 0; x <= 100; x++){
-  if (x%3 === 0 && x%5 !=== 0){
+  if ((x%3 === 0) && !(x%5 === 0)){
     console.log(x);
   }
-  if (x%5 === 0 && x%3 !=== 0){
+  if ((x%5 === 0) && !(x%3 === 0)){
     console.log(x);
   }
 }
