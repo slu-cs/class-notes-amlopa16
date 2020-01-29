@@ -7,7 +7,7 @@ console.log(sum);
 
 // Exercise 2 - first fibonacci # greater than 1000
 let fibs = [0, 1];
-for (let y = 0; y <= 1000; y++){
+for (let y = 2; y <= 1000; y++){
   fibs.push(fibs[y-2]+fibs[y-1]);
   if (fibs[y] >= 1000){
     console.log(fibs[y]);
