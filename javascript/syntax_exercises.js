@@ -9,8 +9,8 @@ console.log(sum);
 let fibs = [0, 1];
 for (let y = 0; y <= 1000; y++){
   fibs.push(fibs[y-2]+fibs[y-1]);
-  if (fibs.last() >= 1000){
-    console.log(fibs.last());
+  if (fibs[y] >= 1000){
+    console.log(fibs[y]);
   }
 }
 
