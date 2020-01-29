@@ -4,3 +4,11 @@
 .BROWN .nav-item {
   color: #4b2b23;
 }
+.BROWN .nav-link.active {
+  background: #4b2b23;
+  color: #ffffff;
+}
+
+.BROWN .nav-link:hover {
+  text-decoration: underline;
+}
