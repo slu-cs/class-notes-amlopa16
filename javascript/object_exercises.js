@@ -38,3 +38,4 @@ const range = function(x, y) {
   }
   return arr;
 };
+console.log(range(2, 8));
