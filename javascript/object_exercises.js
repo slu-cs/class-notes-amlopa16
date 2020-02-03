@@ -5,7 +5,7 @@ const en245 = {subject: 'EN', Level: 245};
 const courses = [cs332, cs370, en245];
 
 let max = 0
-for (const course in courses) {
+for (let course in courses) {
   if (course.level > max) {
     max = course
   }
