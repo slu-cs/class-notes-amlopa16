@@ -8,11 +8,12 @@ const get_course = function(){
   let max = 0
   for (let i = 0; i < courses.length; i++) {
     if (courses[i].level > max) {
-      max = courses[i];
+      max = courses[i].level;
+      max_course = courses[i];
       console.log(max);
     }
   }
-  return max;
+  return max_course;
 };
 console.log(get_course());
 
