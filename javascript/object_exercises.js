@@ -1,7 +1,7 @@
 // Question 1
-const cs332 = {subject: 'CS', Level: 332};
-const cs370 = {subject: 'CS', Level: 370};
-const en245 = {subject: 'EN', Level: 245};
+const cs332 = {subject: 'CS', level: 332};
+const cs370 = {subject: 'CS', level: 370};
+const en245 = {subject: 'EN', level: 245};
 const courses = [cs332, cs370, en245];
 
 const get_course = function(courses){
