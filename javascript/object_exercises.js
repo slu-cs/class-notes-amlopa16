@@ -14,7 +14,6 @@ const get_course = function(){
   }
   console.log(max);
 };
-console.log(get_course(courses));
 
 // Question 2
 const Book = function(title, authors){
