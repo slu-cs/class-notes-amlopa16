@@ -10,7 +10,6 @@ const get_course = function(){
     if (courses[i].level > max) {
       max = courses[i].level;
       max_course = courses[i];
-      console.log(max);
     }
   }
   return max_course;
