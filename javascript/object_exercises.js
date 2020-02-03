@@ -8,7 +8,7 @@ const get_course = function(){
   let max = 0
   for (let i = 0; i < courses.length; i++) {
     if (courses[i].level > max) {
-      max = course;
+      max = course[i];
     }
   }
   return max;
