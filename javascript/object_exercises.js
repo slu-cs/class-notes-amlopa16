@@ -5,12 +5,12 @@ const en245 = {subject: 'EN', Level: 245};
 const courses = [cs332, cs370, en245];
 
 let max = 0
-for (let course in courses) {
+for (const course in courses) {
   if (course.level > max) {
     max = course
   }
 }
-console.log(course);
+console.log(max);
 
 // Question 2
 const Book = function(title, authors){
