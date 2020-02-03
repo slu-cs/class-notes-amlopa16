@@ -9,6 +9,7 @@ const get_course = function(){
   for (let i = 0; i < courses.length; i++) {
     if (courses[i].level > max) {
       max = courses[i];
+      console.log(max);
     }
   }
   return max;
