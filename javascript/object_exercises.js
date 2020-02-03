@@ -7,7 +7,7 @@ const get_course = function(){
   const courses = [cs332, cs370, en245];
   let max = 0
   for (const course in courses) {
-    console.log(course.level);
+    console.log(course);
     if (course.level > max) {
       max = course
     }
