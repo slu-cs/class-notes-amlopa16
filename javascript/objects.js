@@ -25,3 +25,23 @@ console.log(circle.color);
 // adding properties
 circle.color = 'blue';
 console.log(circle);
+
+// Arrays
+const languages = ['HTML', 'CSS', 'JS'];
+console.log(languages);
+
+// Accessing array length and elements
+for (let i=0; i < languages.length; i++){
+  console.log(languages[i]);
+}
+
+// change array elements
+languages[2] = 'JavaScrript';
+
+// Adding elements
+languages.push('MongoDB');
+
+// Iterating over elements
+for (const lang of languages){
+  console.log(lang);
+}
