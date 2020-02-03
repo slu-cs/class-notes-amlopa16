@@ -33,7 +33,7 @@ Book.prototype.check_author = function(author) {
 // Question 3
 const range = function(x, y) {
   const arr = [];
-  for (let i = x; i <= y; i++) {
+  for (let i = x; i < y; i++) {
     arr.push(i);
   }
   return arr;
