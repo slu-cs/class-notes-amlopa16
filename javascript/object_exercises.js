@@ -6,10 +6,10 @@ const get_course = function(){
   const en245 = {subject: 'EN', level: 245};
   const courses = [cs332, cs370, en245];
   let max = 0
-  for (const course in courses) {
-    console.log(course);
+  for (let i = 0; i < courses.length; i++) {
+    console.log(courses[i]);
     if (course.level > max) {
-      max = course
+      max = course;
     }
   }
   return max;
