@@ -4,6 +4,7 @@
 // Asynchronous calls - dont wait for a result, handle the result whenever it arrives
 
 const readline = require('readline');
+const fs = require('fs');
 
 // console configuration
 const user = readline.createInterface({
@@ -14,7 +15,18 @@ const user = readline.createInterface({
 // console input
 user.question('Enter a filename: ', function(filename) {
   console.log(filename);
-});
+  // this part is after the console input
+  const file = readline.createInterface({
+    input: fs.createReadStream(filename)
+  });
 
-// This part isnt after the console input
-console.log('here');
+  // Asynchronous line by line input
+  file.on('line', function(line) {
+    console.log(line);
+  });
+
+  // End the program when the file closes
+  file.on('close', function() {
+    process.exit(0);
+  });
+});
