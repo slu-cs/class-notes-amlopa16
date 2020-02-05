@@ -22,3 +22,7 @@ map(numbers, square);
 
 console.log(map(numbers, square));
 console.log(numbers);
+
+// Defining other transforms with arrow function
+console.log(map(numbers, x => x**2));
+console.log(map(numbers, x => x + 1));
