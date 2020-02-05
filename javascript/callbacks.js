@@ -26,3 +26,6 @@ console.log(numbers);
 // Defining other transforms with arrow function
 console.log(map(numbers, x => x**2));
 console.log(map(numbers, x => x + 1));
+
+// Using the array map method (built in map function)
+console.log(numbers.map(x => x**2));
