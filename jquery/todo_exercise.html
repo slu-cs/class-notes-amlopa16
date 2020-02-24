@@ -3,11 +3,12 @@
   <head>
     <meta charset="utf-8">
     <title>JQuery Objects</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   </head>
   <body>
     <form>
-      <input type="text" name="Add item">
-      <button type="Submit">Add Item</button>
+      <input type="text" name="Add item" class="m-3">
+      <button type="Submit" class="m-3">Add Item</button>
     </form>
     <div id="history"></div>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
@@ -23,7 +24,7 @@
           const inputs = form.find('input');
           for (let input of inputs) {
             input = $(input); // turn into JQuery Objects
-            const li = $(`<li><button id="C">${input.val()}</button></li>`);
+            const li = $(`<li class="m-2"><button id="C">${input.val()}</button></li>`);
             list.append(li);
             input.val('');
           };
@@ -32,7 +33,7 @@
         $('div').on('click', 'button', function(event) {
             $(this).closest('li').remove();
         });
-        
+
     </script>
   </body>
 </html>
