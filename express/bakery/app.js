@@ -1,19 +1,19 @@
-// Hello World web server
+// Bakery web server
 const express = require('express');
 
-// Create the server (Traditionally named app)
+// Create the server
 const app = express();
 
 // Log requests to the console
 app.use(function(request, response, next) {
-  console.log('-----------', new Date().toLocaleTimeString());
+  console.log('---------------------', new Date().toLocaleTimeString());
   console.log(request.method, request.url);
   console.log('Body =', request.body);
-  next(); // Keep handling this request, don't stop yet
+  next(); // Keep handling this request
 });
 
 // Home page
-app.get('/', function(request, repsonse) {
+app.get('/', function(request, response) {
   response.send(`
     <h1>Bakery</h1>
     <ul>
@@ -35,6 +35,6 @@ app.use(function(error, request, response, next) {
   response.status(500).send(error.message);
 });
 
-// Start the server - 3000 is the port number
+// Start the server
 app.listen(3000);
 console.log('Server is ready.');
