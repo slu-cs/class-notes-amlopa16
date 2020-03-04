@@ -13,7 +13,7 @@ app.use(function(request, response, next) {
 });
 
 // Home page
-app.get('/', function(rewuest, repsonse) {
+app.get('/', function(request, repsonse) {
   response.send(`
     <h1>Bakery</h1>
     <ul>
