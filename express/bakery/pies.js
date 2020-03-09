@@ -1,10 +1,16 @@
-// Router for pie-related requests
+// Router for cake-related requests
 const express = require('express');
 
 // Create the router
 const router = express.Router();
 
-// cs-linuxlab-##.stlawu.edu:3000/pies/
+// Pretend database collection
+const pies = [
+  {id: 'apple', flavor: 'Apple'},
+  {id: 'cherry', flavor: 'Cherry'}
+];
+
+// cs-linuxlab-##.stlawu.edu:3000/piess/
 router.get('/', function(request, response) {
   response.send(`
     <h1>Pies</h1>
@@ -15,14 +21,16 @@ router.get('/', function(request, response) {
   `);
 });
 
-// cs-linuxlab-##.stlawu.edu:3000/pies/id
+// cs-linuxlab-##.stlawu.edu:3000/cakes/id
 router.get('/:id', function(request, response, next) {
-  if (request.params.id === 'apple') {
-    response.send('Apple pies');
-  } else if (request.params.id === 'cherry') {
-    response.send('Cherry pies');
-  } else {
+
+  // Pretend database lookup
+  const pie = pies.find(pie => pie.id === request.params.id);
+
+  if (!pie) {
     next(); // Pass on this request
+  } else {
+    response.render('pies/detail', {pie: pie});
   }
 });
 

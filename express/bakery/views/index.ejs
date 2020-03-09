@@ -8,5 +8,11 @@
         <li><a href="/cakes/<%= cake.id -%>"><%= cake.flavor -%></a></li>
       <%_ } -%>
     </ul>
+    <h1>Pies</h1>
+    <ul>
+      <%_ for (const pie of pies) { -%>
+        <li><a href="/pies/<%= pie.id -%>"><%= pie.flavor -%></a></li>
+      <%_ } -%>
+    </ul>
   </body>
 </html>
