@@ -4,6 +4,10 @@ const express = require('express');
 // Create the server
 const app = express();
 
+// Use a view engine
+app.set('view engine', 'ejs');
+app.set('views', './views');
+
 // Ignore icon requests
 app.get('/favicon.ico', function(request, response) {
   response.status(204).end();
@@ -17,21 +21,14 @@ app.use(function(request, response, next) {
   next(); // Keep handling this request
 });
 
-// Home page
+// cs-linuxlab-##.stlawu.edu:3000/
 app.get('/', function(request, response) {
-  response.send(`
-    <h1>Bakery</h1>
-    <ul>
-      <li><a href="/cakes">Cakes</a></li>
-      <li><a href="/pies">Pies</a></li>
-    </ul>
-  `);
+  response.render('index');
 });
 
 // Routing
-app.use('/cakes', require('/.cakes.js'));
-app.use('/pies', require('/.pies.js'));
-
+app.use('/cakes', require('./cakes.js'));
+app.use('/pies', require('./pies.js'));
 
 // Handle undefined routes
 app.use(function(request, response, next) {
